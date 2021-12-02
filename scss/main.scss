@@ -1,0 +1,239 @@
+@import '_vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+// font-family: 'Neucha', sans-serif;
+// font-family: 'Caveat', cursive;
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Philosopher', sans-serif;
+
+*:focus {
+    outline: none;
+}
+
+body {
+    position: relative;
+    background-color: #0c0c0c;
+    background-image: url(../img/main/bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center -160px;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 992px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .container {
+        min-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        min-width: 1440px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        min-width: 1600px;
+        margin: 0 auto;
+        padding: 0 35px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 15px 50px;
+    font-size: 15px;
+    color: #fff;
+    background-color: $primary-color;
+    border: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: $primary-color;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .container {
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+    .left-side {
+        display: flex;
+    }
+    // Logo
+    .logo {
+        display: none;
+        width: 180px;
+        min-height: 60px;
+        max-height: 156px;
+        transition: display 0.3s;
+    }
+    .logo-mobile {
+        display: flex;
+    }
+}
+
+/* Menu */
+@import '_menu';
+
+/* Slider */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #fff;
+}
+
+.page-title {
+    text-align: center;
+
+    h1 {
+        position: relative;
+        display: inline-block;
+        font-family: 'Philosopher', sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 40px;
+        color: #fff;
+
+        &::after {
+            content: url(../img/main/vetka.svg);
+            position: absolute;
+            bottom: -40px;
+            right: -140px;
+        }
+    }
+}
+
+/* Content */
+.content {
+    min-height: 56vh;
+    padding: 70px 0 100px;
+}
+/* Card product */
+@import '_card-products';
+
+/* Filter */
+@import '_filter';
+
+/* Footer */
+@import '_footer';
+
+
+/* Work schedule */
+.work-schedule {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #f7be43;
+}
+
+@media (min-width: 768px) {
+    .section .container {
+        width: 691px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section .container {
+        width: 953px;
+    }
+    /* Header */
+    header .container {
+        display: flex;
+        justify-content: space-between;
+
+        // Logo
+        .logo {
+            display: flex;
+        }
+        .logo-mobile {
+            display: none;
+        }
+    }
+    .content--home {
+        padding: 38px 0;
+    }
+}
+
+@media (min-width: 1366px) {
+    .section .container {
+        width: 1150px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .section .container {
+        width: 1380px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .section .container {
+        width: 1532px;
+    }
+}

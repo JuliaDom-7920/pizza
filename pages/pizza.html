@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Піцца</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Neucha&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- // Fonts -->
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="../css/main.css" />
+        <!-- // Styles-->
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="section">
+            <div class="container">
+                <div class="left-side">
+                    <div class="menu__mobile-btn">
+                        <button class="menu-toggle"></button>
+                    </div>
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="../index.html" title="Головна">
+                            <img src="../img/main/logo.png" alt="Mamamia!" />
+                        </a>
+                    </div>
+
+                    <div class="logo-mobile">
+                        <a href="../index.html" title="Головна">
+                            <img src="../img/main/logo-mobile.svg" alt="Mamamia!" />
+                        </a>
+                    </div>
+                    <!-- // Logo -->
+                </div>
+
+                <!-- Menu -->
+                <div class="menu">
+                    <!-- Menu top -->
+                    <nav class="menu__top">
+                        <a href="" class="feedback icon" title="Відгук" >Feedback</a>
+                        <button class="profile icon" title="Кабінет"></button>
+                        <button class="basket icon" title="Кошик"></button>
+                    </nav>
+                    <!-- // Menu top -->
+
+                    <!-- Menu bottom -->
+                    <nav class="menu__bottom">
+                        <ul class="nav-bar">
+                            <li class="menu__item">
+                                <a href="../pages/actions.html" class="menu__link">Акції</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../pages/pizza.html" class="menu__link">Піца</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../pages/combo-box.html" class="menu__link">Комбо-бокс</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../pages/fri-menu.html" class="menu__link">Фрі-меню</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../pages/salads.html" class="menu__link">Салати</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../pages/drinks.html" class="menu__link">Напої</a>
+                            </li>
+
+                            <!-- Menu drop-down -->
+                            <li class="menu__item">
+                                <span>Більше</span>
+                                <ul class="drop-down">
+                                    <li class="menu__item">
+                                        <a href="../pages/soups.html" class="menu__link">Супи</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="../pages/pasta.html" class="menu__link">Паста</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="../pages/deserts.html" class="menu__link" >Десерти</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- // Menu drop-down -->
+                        </ul>
+                    </nav>
+                    <!-- // Menu bottom -->
+                </div>
+                <!-- // Menu -->
+            </div>
+        </header>
+        <!-- // Header -->
+
+        <!-- Content -->
+        <main class="content section">
+            <div class="container">
+                <div class="page-title">
+                    <h1>Піцца</h1>
+                </div>
+
+                <!-- Filter products -->
+                <button class="popup-filter__open">Фільтр</button>
+                <div class="popup-filter__fade">
+                    <form>
+                        <div class="popup-filter__wrapper">
+                            <h2>Вибрати параметри:</h2>
+                            <button class="popup-filter__close">&#215;</button>
+                            <div class="row">
+                                <p>Тип:</p>
+                                <input type="checkbox" name="type" id="meat" data-filter="М’ясна">
+                                <label for="meat">М’ясна</label>
+                                <input type="checkbox" name="type" id="vega" data-filter="Вегетеріанська">
+                                <label for="vega">Вегетеріанська</label>
+                                <input type="checkbox" name="type" id="fair" data-filter="Гостра">
+                                <label for="fair">Гостра</label>
+                            </div>
+                            <div class="row">
+                                <p>Ціна:</p>
+                                <div class="range-slider">
+                                    <span id="rs-bullet" class="rs-label">179</span>
+                                    <input id="rs-range-line" class="rs-range" type="range" value="179" min="0" max="277">
+                                </div>
+                                <div class="box-minmax">
+                                    <span>0</span><span>277</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p>Компоненти:</p>
+                                <input type="checkbox" name="components" id="elem-1" data-filter="Чеддер">
+                                <label for="elem-1">Чеддер</label>
+                                <input type="checkbox" name="components" id="elem-2" data-filter="Моцарела">
+                                <label for="elem-2">Моцарела</label>
+                                <input type="checkbox" name="components" id="elem-3" data-filter="Пармезан">
+                                <label for="elem-3">Пармезан</label>
+                                <input type="checkbox" name="components" id="elem-4" data-filter="Фета">
+                                <label for="elem-4">Фета</label>
+                                <input type="checkbox" name="components" id="elem-5" data-filter="Дорблю">
+                                <label for="elem-5">Дорблю</label>
+                                <input type="checkbox" name="components" id="elem-6" data-filter="Томати">
+                                <label for="elem-6">Томати</label>
+                                <input type="checkbox" name="components" id="elem-7" data-filter="Печериці">
+                                <label for="elem-7">Печериці</label>
+                                <input type="checkbox" name="components" id="elem-8" data-filter="Корнішони">
+                                <label for="elem-8">Корнішони</label>
+                                <input type="checkbox" name="components" id="elem-9" data-filter="Маринована цибуля">
+                                <label for="elem-9">Маринована цибуля</label>
+                                <input type="checkbox" name="components" id="elem-10" data-filter="Оливки">
+                                <label for="elem-10">Оливки</label>
+                                <input type="checkbox" name="components" id="elem-11" data-filter="Ананаси">
+                                <label for="elem-11">Ананаси</label>
+                                <input type="checkbox" name="components" id="elem-12" data-filter="Кукурудза">
+                                <label for="elem-12">Кукурудза</label>
+                                <input type="checkbox" name="components" id="elem-13" data-filter="Перець солодкий">
+                                <label for="elem-13">Перець солодкий</label>
+                                <input type="checkbox" name="components" id="elem-14" data-filter="Халапеньо">
+                                <label for="elem-14">Халапеньо</label>
+                                <input type="checkbox" name="components" id="elem-15" data-filter="Каперси">
+                                <label for="elem-15">Каперси</label>
+                                <input type="checkbox" name="components" id="elem-16" data-filter="Броколі">
+                                <label for="elem-16">Броколі</label>
+                                <input type="checkbox" name="components" id="elem-17" data-filter="Рукола">
+                                <label for="elem-17">Рукола</label>
+                                <input type="checkbox" name="components" id="elem-18" data-filter="Перець маринований">
+                                <label for="elem-18">Перець маринований</label>
+                                <input type="checkbox" name="components" id="elem-19" data-filter="Часник">
+                                <label for="elem-19">Часник</label>
+                                <input type="checkbox" name="components" id="elem-20" data-filter="Телятина">
+                                <label for="elem-20">Телятина</label>
+                                <input type="checkbox" name="components" id="elem-21" data-filter="Шинка">
+                                <label for="elem-21">Шинка</label>
+                                <input type="checkbox" name="components" id="elem-22" data-filter="Бекон">
+                                <label for="elem-22">Бекон</label>
+                                <input type="checkbox" name="components" id="elem-23" data-filter="Пепероні">
+                                <label for="elem-23">Пепероні</label>
+                                <input type="checkbox" name="components" id="elem-24" data-filter="Мисливські ковбаски">
+                                <label for="elem-24">Мисливські ковбаски</label>
+                                <input type="checkbox" name="components" id="elem-25" data-filter="Куряче філе">
+                                <label for="elem-25">Куряче філе</label>
+                                <input type="checkbox" name="components" id="elem-26" data-filter="Філе качки">
+                                <label for="elem-26">Філе качки</label>
+                            </div>
+                            <div class="row">
+                                <button class="popup-filter__apply btn">Застосувати</button>
+                                <button class="popup-filter__reset btn" type="reset" data-filter="all">Скинути</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- // Filter products -->
+
+                <!-- Card products -->
+                <div class="card-product__wrapper" id="pizza">
+                    <div class="card-product__box product-1">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="М’ясна" title="М’ясна">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-1.webp" alt="Дабл Пепероні" title="Дабл Пепероні">
+                        <h2 class="card-product__title">Дабл Пепероні</h2>
+                        <p class="card-product__description" data-name="Пепероні,соус Класичний">Подвійна порція Пепероні, соус Класичний</p><p class="card-product__weight">510г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">179</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-2">
+                        <img class="card-product__icon" src="../img/icons/vega.png" alt="Вегетаріанська" title="Вегетаріанська">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-2.webp" alt="Маргарита" title="Маргарита">
+                        <h2 class="card-product__title">Маргарита</h2>
+                        <p class="card-product__description" data-name="Томати,Моцарела,соус Песто,соус Класичний">Томати, Моцарела, соус Песто, соус Класичний</p><p class="card-product__weight">520г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">181</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-3">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="М’ясна" title="М’ясна">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-3.webp" alt="Кантрі" title="Кантрі">
+                        <h2 class="card-product__title">Кантрі</h2>
+                        <p class="card-product__description" data-name="Шинка,Пепероні,Томати,Печериці,соус Класичний">Шинка, Пепероні, Томати, Печериці, соус Класичний</p>
+                        <p class="card-product__weight">555г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">211</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-4">
+                        <img class="card-product__icon" src="../img/icons/fair.png" alt="Гостра" title="Гостра">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-4.webp" alt="Дьябло" title="Дьябло">
+                        <h2 class="card-product__title">Дьябло</h2>
+                        <p class="card-product__description" data-name="Мисливські ковбаски,Халапеньо,соус Барбекю">Подвійні мисливські ковбаски, Халапеньо, соус Барбекю</p>
+                        <p class="card-product__weight">540г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">195</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-5">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="М’ясна" title="М’ясна">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-5.webp" alt="Mamamia!" title="Mamamia!">
+                        <h2 class="card-product__title">Mamamia!</h2>
+                        <p class="card-product__description" data-name="Ананаси,Шинка,Пепероні,Перець маринований,соус Класичний">Ананаси, Шинка, Пепероні, Маринований солодкий перець, Класичний соус</p>
+                        <p class="card-product__weight">520г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">211</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-6">
+                        <img class="card-product__icon" src="../img/icons/vega.png" alt="Вегетеріанська" title="Вегетеріанська">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-6.webp" alt="Порчіні" title="Порчіні">
+                        <h2 class="card-product__title">Порчіні</h2>
+                        <p class="card-product__description" data-name="Соус Рікота,Маринована Цибуля,Печериці,Рукола">Соус Рікота, Гриби запечені білі та Печериці з цибулею, Печериці свіжі, Рукола</p>
+                        <p class="card-product__weight">500г</p>
+                            <div class="card-product__price-btn-buy">
+                                <span class="price">205</span>
+                                <button class="btn btn-buy">Замовити</button>
+                            </div>
+                        </div>
+                    <div class="card-product__box product-7">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="М’ясна" title="М’ясна">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-7.webp" alt="Гаваї" title="Гаваї">
+                        <h2 class="card-product__title">Гаваї</h2>
+                        <p class="card-product__description" data-name="Куряче філе,Перець маринований,Ананаси,соус Класичний">Куряче філе, Маринований солодкий перець, Ананаси, Класичний соус</p>
+                        <p class="card-product__weight">510г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">183</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-8">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="М’ясна" title="М’ясна">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-8.webp" alt="Барбекю" title="Барбекю">
+                        <h2 class="card-product__title">Барбекю</h2>
+                        <p class="card-product__description" data-name="Бекон,Телятина,Печериці,Маринована Цибуля,соус Барбекю">Бекон, Телятина, Печериці, Маринована Цибуля, соус Барбекю</p>
+                        <p class="card-product__weight">520г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">211</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-9">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="М’ясна" title="М’ясна">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-9.webp" alt="Годфазер" title="Годфазер">
+                        <h2 class="card-product__title">Годфазер</h2>
+                        <p class="card-product__description" data-name="Мисливські ковбаски,Корнішони,Бекон,Маринована Цибуля,Печериці,соус Барбекю">Мисливські ковбаски, Корнішони, Бекон, Цибуля, Печериці, соус Барбекю</p><p class="card-product__weight">540г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">227</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                    <div class="card-product__box product-10">
+                        <img class="card-product__icon" src="../img/icons/meat.png" alt="undefined" title="undefined">
+                        <img class="card-product__img" src="../img/products/pizza/pizza-10.webp" alt="Модильяні" title="Модильяні">
+                        <h2 class="card-product__title">Модильяні</h2>
+                        <p class="card-product__description" data-name="Філе качки,Перець маринований,Фета,Каперси,соус Класичний">Подвійна Качка, Підвійний Маринований перець, Фета, Каперси, соус Класичний</p>
+                        <p class="card-product__weight">550г</p>
+                        <div class="card-product__price-btn-buy">
+                            <span class="price">277</span>
+                            <button class="btn btn-buy">Замовити</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Card products -->
+            </div>
+        </main>
+        <!-- // Content -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer__logo">
+                        <a href="../index.html" title="Головна">
+                            <img src="../img/main/logo-footer.png" alt="Mamamia!" />
+                        </a>
+                    </div>
+                    <div class="footer__social">
+                        <a href="" title="Facebook">
+                            <img src="../img/icons/facebook.svg" alt="Facebook" />
+                        </a>
+                        <a href="" title="Instagram">
+                            <img src="../img/icons/instagram.png" alt="Instagram" />
+                        </a>
+                        <a href="" title="Viber">
+                            <img src="../img/icons/viber.svg" alt="Viber" />
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav class="footer__menu">
+                        <div class="col">
+                            <a href="">Контакти</a>
+                            <a href="">Ресторани</a>
+                            <a href="">Умови та зони доставки</a>
+                        </div>
+                        <div class="col">
+                            <a href="">Бонусна програма</a>
+                            <a href="">Обробка персональних даних</a>
+                            <a href="">Про компанію</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="footer__pay">
+                        <img src="../img/icons/mastercard.svg" alt="Mastercard" />
+                        <img src="../img/icons/visa-pay-logo.svg" alt="Visa" />
+                    </div>
+                    <p>© 2002–2021 Мережа піцерій Mamamia!</p>
+                </div>
+            </div>
+        </footer>
+        <!-- // Footer -->
+
+        <!-- Work schedule -->
+        <div class="work-schedule">
+            <div class="container">
+                <p>Доставка безкоштовна. Режим роботи: будні дні - з 11:00 до 22:00. ПТ, СБ, НД - з 11:00 до 23:00</p>
+            </div>
+        </div>
+        <!-- // Work schedule -->
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+        <script src="../js/main.js"></script>
+        <!-- <script src="../js/pizza.js"></script> -->
+        <script src="../js/filter.js"></script>
+        <!-- // Scripts -->
+    </body>
+</html>

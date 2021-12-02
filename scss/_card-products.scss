@@ -1,0 +1,70 @@
+@import '_vars';
+
+/* Card products*/
+.card-product {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &::after {
+            content: '';
+            flex: 0 1 32%;
+        }
+    }
+
+    &__box {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        margin: 20px 0 0;
+        padding: 13px;
+        text-align: center;
+        color: #fff;
+        border: 1px solid rgba(150, 150, 150, 0.19);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        width: 20px;
+    }
+    &__img {
+        height: 190px;
+    }
+
+    &__title {
+        margin: 5px 0 11px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 22px;
+    }
+
+    &__description {
+        margin-bottom: 11px;
+        font-family: 'Caveat', cursive;
+        font-size: 22px;
+    }
+
+    &__price-btn-buy {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .price {
+            display: inline-block;
+            margin-right: 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            vertical-align: middle;
+            color: #fff;
+
+            &::after {
+                content: 'грн';
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
